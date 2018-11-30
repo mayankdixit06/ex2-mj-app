@@ -8,7 +8,7 @@ var sectionStyle={
     backgroundImage: "url("+ Background +")"
 };
 
-class App extends Component {
+class SignIn extends Component {
   render() {
     return (
       <div className="limiter">
@@ -46,7 +46,7 @@ class App extends Component {
 					</div>
 
 					<div className="text-center w-full p-t-25 p-b-230">
-						<a href="/s" className="txt1">
+						<a href="./user" className="txt1">
 							Forgot Username / Password?
 						</a>
 					</div>
@@ -65,4 +65,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default SignIn;

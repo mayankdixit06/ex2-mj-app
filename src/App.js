@@ -1,23 +1,37 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import SideBar from './components/sidebar/sidebar.js';
-import Header from './components/headers/header.js';
-import Footer from './components/footers/footer.js';
+import User from './components/users/user';
+import SignIn from './components/signin/signin'; 
 
 class App extends Component {
   render() {
     return (
-      <div className="wrapper">
-                <SideBar />
-                <div class="main-panel">
-                    <Header />
-                    <div className="content">
-
-                    </div>
-                    <Footer />
-                </div>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route exact={true} path='/' render={() => (
+            <div className="App">
+              <SignIn />
+            </div>
+          )}/>
+          <Route exact={true} path='/signin' render={() => (
+            <div className="App">
+              <SignIn />
+            </div>
+          )}/>
+          <Route exact={true} path='/user' render={() => (
+            <div className="App">
+              <User />
+            </div>
+          )}/>
+          {/* <Route exact={true} path='/signup' render={() => (
+            <div className="App">
+              <SignUp />
+            </div>
+          )}/> */}
+        </div>
+      </BrowserRouter>
     );
   }
 }

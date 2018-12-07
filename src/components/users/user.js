@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-
+import Header from '../headers/header';
+import Footer from '../footers/footer';
+import SideBar from '../sidebar/sidebar';
 
 class User extends Component{
     render(){
@@ -8,8 +10,8 @@ class User extends Component{
                 <SideBar />
                 <div class="main-panel">
                     <Header />
-                    <div className="content">
-
+                    <div className="content" id="mainContent">
+                        
                     </div>
                     <Footer />
                 </div>
@@ -18,4 +20,4 @@ class User extends Component{
     }
 }
 
-// ReactDOM.render(<User />, document.getElementById('root'));
+export default User;

@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
+import {withRouter} from 'react-router-dom';
 
 class Header extends Component{
+    handleLogout = async event => {
+        // await Auth.signOut();
+      
+        // this.userHasAuthenticated(false);
+      
+        this.props.history.push("/signin");
+      }
     render(){
         return (
             <nav className="navbar navbar-default navbar-fixed">
@@ -72,7 +80,7 @@ class Header extends Component{
                               </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a onClick={this.handleLogout}>
                                 <p>Log out</p>
                             </a>
                         </li>
@@ -85,4 +93,4 @@ class Header extends Component{
     }
 }
 
-export default Header;
+export default withRouter(Header);

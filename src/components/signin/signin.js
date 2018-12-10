@@ -59,11 +59,11 @@ class SignIn extends Component {
        return formIsValid;
    }
 
-   contactSubmit(e){
+   formSubmit(e){
         e.preventDefault();
 
         if(this.handleValidation()){
-		   alert("Form submitted"); 
+		   //alert("Form submitted"); 
 		   //await Auth.signIn(this.state.email, this.state.password);
 			//this.props.userHasAuthenticated(true);
 			this.props.history.push('/user')
@@ -84,7 +84,7 @@ class SignIn extends Component {
       <div className="limiter">
 		<div className="container-login100" style={ sectionStyle }>
 			<div className="wrap-login100 p-t-190 p-b-30">
-				<form className="login100-form validate-form" onSubmit= {this.contactSubmit.bind(this)}>
+				<form className="login100-form validate-form" onSubmit= {this.formSubmit.bind(this)}>
 					<div className="login100-form-avatar">
 						<img src={logo} />
 					</div>
